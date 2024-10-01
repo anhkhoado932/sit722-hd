@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlixTube: Login</title>
+    <link rel="stylesheet" href="/css/tailwind.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+    <div class="flex flex-col items-center justify-center h-screen">
+        <h1 class="text-2xl font-bold">Login</h1>
+
+        <!-- This form will POST to the /login route, where the server will handle setting the JWT in cookies -->
+        <form action="/login" method="POST" class="flex flex-col w-64 mt-4">
+            <input type="text" name="username" placeholder="Username" class="p-2 border mb-2" required />
+            <input type="password" name="password" placeholder="Password" class="p-2 border mb-4" required />
+            <button type="submit" class="p-2 bg-blue-500 text-white">Login</button>
+        </form>
+
+        <p class="mt-2">Don't have an account? <a href="/register" class="text-blue-600">Register here</a>.</p>
+    </div>
+</body>
+</html>
