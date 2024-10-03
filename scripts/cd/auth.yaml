@@ -28,7 +28,12 @@ spec:
         - name: DBHOST
           value: mongodb://mongodb:27017
         - name: DBNAME
-          value: history
+          value: auth
+        - name: SECRET_USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: jwt-signing
+              key: jwt-signing-key
 
 ---
 apiVersion: v1
